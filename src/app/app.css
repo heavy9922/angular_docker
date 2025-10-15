@@ -1,7 +1,7 @@
 :host {
   --docker-blue: #2496ed;
   --docker-dark-blue: #1e6cb3;
-  --white: #ffffff;
+  --white: #fff;
   --gray-50: #f8fafc;
   --gray-100: #f1f5f9;
   --gray-200: #e2e8f0;
@@ -15,8 +15,7 @@
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,7 +26,7 @@
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
 }
 
-/* Header Styles */
+/* Header */
 .hero-section {
   background: linear-gradient(135deg, var(--docker-blue) 0%, var(--docker-dark-blue) 100%);
   color: var(--white);
@@ -52,7 +51,7 @@
 .hero-section h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
   letter-spacing: -0.025em;
 }
 
@@ -76,7 +75,6 @@
   padding: 0 1rem;
 }
 
-/* Section Styles */
 section {
   padding: 4rem 0;
 }
@@ -89,7 +87,7 @@ h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--gray-900);
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
   text-align: center;
 }
 
@@ -97,26 +95,30 @@ h3 {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--gray-800);
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
 }
 
 p {
   color: var(--gray-600);
   line-height: 1.7;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.5rem;
   font-size: 1.1rem;
 }
 
-/* Intro Section */
-.intro-section {
+/* Sections */
+.intro-section, .commands-section, .best-practices-section, .containers-explanation-section {
   background: var(--white);
+}
+
+.concepts-section, .example-section, .use-cases-section {
+  background: var(--gray-50);
 }
 
 .intro-section p {
   text-align: center;
   font-size: 1.2rem;
   max-width: 800px;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 3rem;
 }
 
 .benefits-grid {
@@ -156,12 +158,7 @@ p {
   margin: 0;
 }
 
-/* Concepts Section */
-.concepts-section {
-  background: var(--gray-50);
-}
-
-.concept-item {
+.concept-item, .practice-item {
   background: var(--white);
   border-radius: 12px;
   padding: 2rem;
@@ -170,16 +167,20 @@ p {
   border-left: 4px solid var(--docker-blue);
 }
 
-.concept-item h3 {
+.practice-item {
+  background: var(--gray-50);
+  border-left-color: var(--success);
+}
+
+.concept-item h3, .practice-item h3 {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   color: var(--gray-900);
 }
 
-/* Commands Section */
-.commands-section {
-  background: var(--white);
+.practice-item h3 {
+  color: var(--success);
 }
 
 .commands-grid {
@@ -211,11 +212,6 @@ p {
   color: var(--gray-300);
   margin: 0;
   font-size: 0.95rem;
-}
-
-/* Example Section */
-.example-section {
-  background: var(--gray-50);
 }
 
 .code-block {
@@ -274,32 +270,7 @@ p {
   font-weight: 600;
 }
 
-/* Best Practices Section */
-.best-practices-section {
-  background: var(--white);
-}
-
-.practice-item {
-  background: var(--gray-50);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid var(--success);
-}
-
-.practice-item h3 {
-  color: var(--success);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Containers Explanation Section */
-.containers-explanation-section {
-  background: var(--white);
-}
-
+/* Containers Section */
 .containers-intro {
   text-align: center;
   margin-bottom: 3rem;
@@ -347,7 +318,7 @@ p {
 }
 
 .comparison-box h4 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
   font-size: 1.25rem;
   text-align: center;
 }
@@ -426,7 +397,7 @@ p {
 }
 
 .layer-content h4 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   color: var(--gray-900);
   font-size: 1.1rem;
 }
@@ -437,11 +408,7 @@ p {
   font-size: 0.95rem;
 }
 
-/* Use Cases Section */
-.use-cases-section {
-  background: var(--gray-50);
-}
-
+/* Use Cases */
 .use-cases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -529,7 +496,6 @@ p {
   font-weight: 600;
 }
 
-/* Footer */
 .footer {
   background: var(--docker-blue);
   color: var(--white);
@@ -543,78 +509,55 @@ p {
   margin: 0;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media screen and (max-width: 768px) {
   .hero-section {
     padding: 3rem 1rem;
   }
-
   .hero-section h1 {
     font-size: 2.5rem;
   }
-
   .hero-subtitle {
     font-size: 1.1rem;
   }
-
   .main-content {
     padding: 0 1rem;
   }
-
   section {
     padding: 3rem 0;
   }
-
   h2 {
     font-size: 2rem;
   }
-
-  .benefits-grid {
+  .benefits-grid, .commands-grid, .use-cases-grid {
     grid-template-columns: 1fr;
+  }
+  .benefits-grid {
     gap: 1.5rem;
   }
-
-  .commands-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .use-cases-grid {
-    grid-template-columns: 1fr;
-  }
-
   .vm-vs-container {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
   .vs-separator {
     min-width: 50px;
     height: 50px;
     font-size: 0.8rem;
   }
-
   .examples-list {
     grid-template-columns: 1fr;
   }
-
-  .concept-item,
-  .practice-item,
-  .benefit-card,
-  .use-case-card,
-  .comparison-box {
+  .concept-item, .practice-item, .benefit-card, .use-case-card, .comparison-box {
     padding: 1.5rem;
   }
-
   .architecture-layer {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-
   .layer-icon {
     font-size: 2rem;
   }
-
   .code-block {
     padding: 1.5rem;
     font-size: 0.8rem;
@@ -625,13 +568,10 @@ p {
   .hero-section h1 {
     font-size: 2rem;
   }
-
   h2 {
     font-size: 1.75rem;
   }
-
-  .concept-item h3,
-  .practice-item h3 {
+  .concept-item h3, .practice-item h3 {
     font-size: 1.25rem;
   }
 }
