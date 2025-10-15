@@ -1,0 +1,357 @@
+<div class="docker-page">
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="docker-logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5 9.5h-1V8.5H13.5V9.5zM13.5 7h-1V6H13.5V7zM15 9.5h-1V8.5H15V9.5zM15 7h-1V6H15V7zM16.5 9.5h-1V8.5H16.5V9.5zM16.5 7h-1V6H16.5V7z" fill="#2496ED"/>
+          <path d="M20.5 7h-3v1.5h3V7zM20.5 9.5h-3V11h3V9.5z" fill="#2496ED"/>
+          <path d="M1 11v1h1.5V11H1zM3.5 11v1H5V11H3.5zM6 11v1h1.5V11H6zM8.5 11v1H10V11H8.5zM11 11v1h1.5V11H11zM13.5 11v1H15V11H13.5zM16 11v1h1.5V11H16zM18.5 11v1H20V11H18.5zM20.5 11v1H22V11H20.5zM1 13.5v1h1.5v-1H1zM3.5 13.5v1H5v-1H3.5zM6 13.5v1h1.5v-1H6zM8.5 13.5v1H10v-1H8.5zM11 13.5v1h1.5v-1H11zM13.5 13.5v1H15v-1H13.5zM16 13.5v1h1.5v-1H16zM18.5 13.5v1H20v-1H18.5zM20.5 13.5v1H22v-1H20.5z" fill="#2496ED"/>
+          <path d="M12 2L22 7V17L12 22L2 17V7L12 2Z" stroke="#2496ED" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <h1>Guía Completa de Docker</h1>
+      <p class="hero-subtitle">Aprende las bases de Docker y containerización de forma sencilla</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="intro-section">
+      <div class="container">
+        <h2>¿Qué es Docker?</h2>
+        <p>Docker es una plataforma de contenedores que permite empaquetar aplicaciones y sus dependencias en contenedores ligeros y portátiles. Esto resuelve el problema de "funciona en mi máquina" al asegurar que la aplicación se ejecute de la misma manera en cualquier entorno.</p>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">🚀</div>
+            <h3>Portabilidad</h3>
+            <p>Ejecuta la misma aplicación en desarrollo, testing y producción</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <h3>Eficiencia</h3>
+            <p>Contenedores ligeros que inician en segundos</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🔧</div>
+            <h3>Consistencia</h3>
+            <p>Entorno predecible para todo el equipo</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📦</div>
+            <h3>Escalabilidad</h3>
+            <p>Fácil escalado horizontal de aplicaciones</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concepts-section">
+      <div class="container">
+        <h2>Conceptos Fundamentales</h2>
+
+        <div class="concept-item">
+          <h3>🐳 Contenedores</h3>
+          <p>Los contenedores son unidades ligeras y ejecutables que incluyen todo lo necesario para ejecutar una aplicación: código, runtime, herramientas del sistema, bibliotecas y configuraciones.</p>
+        </div>
+
+        <div class="concept-item">
+          <h3>📋 Imágenes</h3>
+          <p>Las imágenes Docker son plantillas de solo lectura que definen la estructura del contenedor. Son como las "clases" de los contenedores, mientras que los contenedores son las "instancias".</p>
+        </div>
+
+        <div class="concept-item">
+          <h3>📄 Dockerfile</h3>
+          <p>Un Dockerfile es un archivo de texto que contiene instrucciones para construir una imagen Docker. Define el entorno, dependencias y comandos necesarios para tu aplicación.</p>
+        </div>
+
+        <div class="concept-item">
+          <h3>🏭 Docker Hub</h3>
+          <p>Docker Hub es el registro público de imágenes Docker donde puedes encontrar miles de imágenes listas para usar y compartir las tuyas propias.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="containers-explanation-section">
+      <div class="container">
+        <h2>¿Qué son los Contenedores?</h2>
+
+        <div class="containers-intro">
+          <p>Los contenedores son una tecnología de virtualización a nivel de sistema operativo que permite empaquetar una aplicación junto con todas sus dependencias en una unidad liviana, ejecutable e independiente.</p>
+        </div>
+
+        <div class="containers-comparison">
+          <div class="comparison-item">
+            <h3>🖥️ Máquinas Virtuales vs Contenedores</h3>
+            <div class="vm-vs-container">
+              <div class="comparison-box vm-box">
+                <h4>Máquinas Virtuales</h4>
+                <ul>
+                  <li>Sistema operativo completo</li>
+                  <li>Mayor consumo de recursos</li>
+                  <li>Tiempo de arranque lento (minutos)</li>
+                  <li>Aislamiento por hardware virtualizado</li>
+                  <li>Mayor tamaño (GB)</li>
+                </ul>
+              </div>
+              <div class="vs-separator">VS</div>
+              <div class="comparison-box container-box">
+                <h4>Contenedores</h4>
+                <ul>
+                  <li>Comparte el kernel del SO</li>
+                  <li>Menor consumo de recursos</li>
+                  <li>Tiempo de arranque rápido (segundos)</li>
+                  <li>Aislamiento por namespace</li>
+                  <li>Menor tamaño (MB)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="containers-architecture">
+          <h3>🏗️ Arquitectura de los Contenedores</h3>
+          <div class="architecture-explanation">
+            <div class="architecture-layer">
+              <div class="layer-icon">📱</div>
+              <div class="layer-content">
+                <h4>Aplicación</h4>
+                <p>Tu código y sus archivos, bibliotecas, configuraciones</p>
+              </div>
+            </div>
+            <div class="architecture-layer">
+              <div class="layer-icon">📦</div>
+              <div class="layer-content">
+                <h4>Contenedor</h4>
+                <p>Aislamiento y empaquetado de la aplicación</p>
+              </div>
+            </div>
+            <div class="architecture-layer">
+              <div class="layer-icon">🐧</div>
+              <div class="layer-content">
+                <h4>Docker Engine</h4>
+                <p>Gestiona contenedores, networking, almacenamiento</p>
+              </div>
+            </div>
+            <div class="architecture-layer">
+              <div class="layer-icon">💻</div>
+              <div class="layer-content">
+                <h4>Sistema Operativo</h4>
+                <p>Linux kernel compartido por todos los contenedores</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="use-cases-section">
+      <div class="container">
+        <h2>Casos de Uso de Docker</h2>
+
+        <div class="use-cases-grid">
+          <div class="use-case-card">
+            <div class="use-case-icon">💻</div>
+            <h3>Desarrollo Local</h3>
+            <p>Crear entornos consistentes para desarrolladores. Todos trabajan con las mismas versiones de herramientas, bases de datos y servicios.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> Equipo desarrollando con Node.js 18, PostgreSQL 14, Redis 7
+            </div>
+          </div>
+
+          <div class="use-case-card">
+            <div class="use-case-icon">🧪</div>
+            <h3>Testing y CI/CD</h3>
+            <p>Automatizar pruebas en pipelines. Cada build ejecuta en un entorno limpio y reproducible.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> GitHub Actions, Jenkins, GitLab CI ejecutando tests en contenedores
+            </div>
+          </div>
+
+          <div class="use-case-card">
+            <div class="use-case-icon">🌐</div>
+            <h3>Microservicios</h3>
+            <p>Descomponer aplicaciones monolíticas en servicios independientes, cada uno en su propio contenedor.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> API REST, servicio de autenticación, procesador de pagos
+            </div>
+          </div>
+
+          <div class="use-case-card">
+            <div class="use-case-icon">☁️</div>
+            <h3>Cloud y DevOps</h3>
+            <p>Despliegue en cloud providers como AWS, Google Cloud, Azure usando Kubernetes o servicios manejados.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> EKS (AWS), GKE (Google), AKS (Azure)
+            </div>
+          </div>
+
+          <div class="use-case-card">
+            <div class="use-case-icon">🔄</div>
+            <h3>Escalabilidad</h3>
+            <p>Escalar aplicaciones horizontalmente mediante orquestadores como Docker Swarm o Kubernetes.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> Auto-scaling basado en CPU/memoria, load balancing
+            </div>
+          </div>
+
+          <div class="use-case-card">
+            <div class="use-case-icon">🛠️</div>
+            <h3>Herramientas y Utilidades</h3>
+            <p>Ejecutar herramientas sin instalarlas localmente: bases de datos, servidores web, utilidades de desarrollo.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> PostgreSQL, Redis, Nginx, herramientas de monitoreo
+            </div>
+          </div>
+
+          <div class="use-case-card">
+            <div class="use-case-icon">🚀</div>
+            <h3>Despliegue Portátil</h3>
+            <p>La misma aplicación funciona igual en desarrollo, staging y producción sin modificaciones.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> "Build once, run anywhere"
+            </div>
+          </div>
+
+          <div class="use-case-card">
+            <div class="use-case-icon">🔒</div>
+            <h3>Seguridad y Aislamiento</h3>
+            <p>Aislamiento entre aplicaciones, control de recursos, y procesos más seguros que ejecutar directamente en el host.</p>
+            <div class="use-case-example">
+              <strong>Ejemplo:</strong> Limitación de CPU/memoria, redes aisladas
+            </div>
+          </div>
+        </div>
+
+        <div class="real-world-examples">
+          <h3>🌟 Ejemplos del Mundo Real</h3>
+          <div class="examples-list">
+            <div class="example-item">
+              <strong>Netflix:</strong> Maneja millones de contenedores para sus servicios de streaming
+            </div>
+            <div class="example-item">
+              <strong>Spotify:</strong> Usa contenedores para microservicios y procesamiento de datos
+            </div>
+            <div class="example-item">
+              <strong>Uber:</strong> Migró su infraestructura a Docker para mejor escalabilidad
+            </div>
+            <div class="example-item">
+              <strong>Pinterest:</strong> Redujo tiempo de despliegue de horas a minutos usando Docker
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="commands-section">
+      <div class="container">
+        <h2>Comandos Básicos de Docker</h2>
+
+        <div class="commands-grid">
+          <div class="command-card">
+            <code class="command">docker --version</code>
+            <p>Verifica la instalación de Docker</p>
+          </div>
+
+          <div class="command-card">
+            <code class="command">docker run hello-world</code>
+            <p>Ejecuta el contenedor de prueba "hello-world"</p>
+          </div>
+
+          <div class="command-card">
+            <code class="command">docker build -t mi-app .</code>
+            <p>Construye una imagen desde un Dockerfile</p>
+          </div>
+
+          <div class="command-card">
+            <code class="command">docker images</code>
+            <p>Lista todas las imágenes disponibles</p>
+          </div>
+
+          <div class="command-card">
+            <code class="command">docker ps</code>
+            <p>Muestra contenedores en ejecución</p>
+          </div>
+
+          <div class="command-card">
+            <code class="command">docker stop &lt;container_id&gt;</code>
+            <p>Detiene un contenedor específico</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <div class="container">
+        <h2>Ejemplo: Dockerfile para esta aplicación Angular</h2>
+        <p>Aquí tienes un ejemplo de Dockerfile optimizado para aplicaciones Angular:</p>
+
+        <div class="code-block">
+          <pre><code># Etapa 1: Construcción
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY . .
+RUN npm run build
+
+# Etapa 2: Servidor web
+FROM nginx:alpine
+COPY --from=builder /app/dist/angular-docker /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]</code></pre>
+        </div>
+
+        <div class="example-explanation">
+          <h3>Explicación del Dockerfile:</h3>
+          <ul>
+            <li><strong>FROM node:18-alpine</strong>: Usa Node.js 18 como base para la construcción</li>
+            <li><strong>WORKDIR /app</strong>: Establece el directorio de trabajo</li>
+            <li><strong>COPY package*.json ./</strong>: Copia archivos de dependencias</li>
+            <li><strong>RUN npm ci</strong>: Instala dependencias</li>
+            <li><strong>RUN npm run build</strong>: Construye la aplicación Angular</li>
+            <li><strong>FROM nginx:alpine</strong>: Segunda etapa usando Nginx para servir archivos</li>
+            <li><strong>EXPOSE 80</strong>: Expone el puerto 80</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="best-practices-section">
+      <div class="container">
+        <h2>Mejores Prácticas</h2>
+
+        <div class="practice-item">
+          <h3>✅ Usa imágenes base minimalistas</h3>
+          <p>Utiliza imágenes Alpine Linux que son más pequeñas y seguras que las imágenes completas.</p>
+        </div>
+
+        <div class="practice-item">
+          <h3>✅ Multi-stage builds</h3>
+          <p>Usa construcciones de múltiples etapas para crear imágenes más pequeñas y sin dependencias de desarrollo.</p>
+        </div>
+
+        <div class="practice-item">
+          <h3>✅ .dockerignore</h3>
+          <p>Crea un archivo .dockerignore para excluir archivos innecesarios como node_modules y archivos de prueba.</p>
+        </div>
+
+        <div class="practice-item">
+          <h3>✅ Cache de dependencias</h3>
+          <p>Copia primero los archivos package.json para aprovechar el cache de Docker en las instalaciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>🎉 ¡Felicidades! Ahora conoces las bases de Docker. ¡Es hora de containerizar tu aplicación!</p>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<router-outlet />
