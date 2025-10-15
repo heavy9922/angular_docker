@@ -20,10 +20,20 @@ import { RouterLink } from '@angular/router';
           <p class="hero-subtitle">Domina técnicas avanzadas de Docker para aplicaciones en producción</p>
 
           <div class="navigation-menu">
-            <a routerLink="/basicos" class="nav-button">Conceptos Básicos</a>
-            <a routerLink="/intermedios" class="nav-button active">Conceptos Intermedios</a>
-            <a routerLink="/avanzados" class="nav-button">Conceptos Avanzados</a>
-            <a routerLink="/especializados" class="nav-button">Especializados</a>
+            <div class="nav-section">
+              <h4>Docker</h4>
+              <a routerLink="/basicos" class="nav-button">Básicos</a>
+              <a routerLink="/intermedios" class="nav-button active">Intermedios</a>
+              <a routerLink="/avanzados" class="nav-button">Avanzados</a>
+              <a routerLink="/especializados" class="nav-button">Especializados</a>
+            </div>
+            <div class="nav-section">
+              <h4>Kubernetes</h4>
+              <a routerLink="/k8s-basicos" class="nav-button">Básicos</a>
+              <a routerLink="/k8s-intermedios" class="nav-button">Intermedios</a>
+              <a routerLink="/k8s-avanzados" class="nav-button">Avanzados</a>
+              <a routerLink="/k8s-especializados" class="nav-button">Especializados</a>
+            </div>
           </div>
         </div>
       </header>

@@ -32,7 +32,7 @@
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
 }
 
-.intermediate-page, .advanced-page, .specialized-page {
+.intermediate-page, .advanced-page, .specialized-page, .kubernetes-page, .kubernetes-intermediate-page, .kubernetes-advanced-page, .kubernetes-specialized-page {
   min-height: 100vh;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
 }
@@ -523,31 +523,69 @@ p {
 /* Navigation Styles */
 .navigation-menu {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   justify-content: center;
   margin-top: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.nav-section h4 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-section .nav-button {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  margin: 0.2rem 0;
+  width: 100%;
+  text-align: center;
 }
 
 .nav-button {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   color: var(--white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  min-width: 140px;
 }
 
 .nav-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-button.active {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--docker-blue);
   border-color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .navigation-links {
@@ -730,6 +768,100 @@ p {
   margin-bottom: 1rem;
 }
 
+/* Kubernetes Page Specific Styles */
+.kubernetes-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kubernetes-logo svg {
+  width: 48px;
+  height: 48px;
+}
+
+.kubernetes-page .hero-section {
+  background: linear-gradient(135deg, #326CE5 0%, #1f4fd3 100%);
+}
+
+.config-section, .storage-section, .networking-section, .health-section, .resources-section {
+  background: var(--gray-50);
+}
+
+.operators-section, .service-mesh-section, .security-section, .monitoring-section, .gitops-section {
+  background: var(--white);
+}
+
+.multicluster-section, .edge-section, .scheduler-section, .workload-api-section, .performance-section, .disaster-recovery-section {
+  background: var(--gray-50);
+}
+
+.operator-concepts, .mesh-features, .security-features, .monitoring-tools, .gitops-workflows, .multicluster-concepts, .edge-solutions, .scheduler-features, .workload-apis, .performance-tools, .recovery-strategies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.operator-concepts .concept-card, .mesh-features .feature-card, .monitoring-tools .tool-card, .gitops-workflows .workflow-card, .multicluster-concepts .concept-card, .edge-solutions .solution-card, .scheduler-features .feature-card, .workload-apis .api-card, .performance-tools .tool-card, .recovery-strategies .strategy-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.operator-concepts .concept-card:hover, .mesh-features .feature-card:hover, .monitoring-tools .tool-card:hover, .gitops-workflows .workflow-card:hover, .multicluster-concepts .concept-card:hover, .edge-solutions .solution-card:hover, .scheduler-features .feature-card:hover, .workload-apis .api-card:hover, .performance-tools .tool-card:hover, .recovery-strategies .strategy-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: #326CE5;
+}
+
+.operator-concepts .concept-card h3, .mesh-features .feature-card h3, .monitoring-tools .tool-card h3, .gitops-workflows .workflow-card h3, .multicluster-concepts .concept-card h3, .edge-solutions .solution-card h3, .scheduler-features .feature-card h3, .workload-apis .api-card h3, .performance-tools .tool-card h3, .recovery-strategies .strategy-card h3 {
+  color: #326CE5;
+  margin-bottom: 1rem;
+}
+
+.architecture-layer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.layer-icon {
+  font-size: 3rem;
+  background: var(--gray-100);
+  padding: 1rem;
+  border-radius: 50%;
+  min-width: 80px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layer-content h4 {
+  color: var(--docker-blue);
+  margin-bottom: 0.5rem;
+}
+
+.layer-content p {
+  color: var(--gray-600);
+  margin: 0;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
   .hero-section {
@@ -750,7 +882,7 @@ p {
   h2 {
     font-size: 2rem;
   }
-  .benefits-grid, .commands-grid, .use-cases-grid, .concept-grid, .volume-types, .compose-features, .env-strategies, .health-methods, .optimization-tips, .monitoring-tools, .security-features, .performance-tips, .networking-concepts, .cicd-workflows, .pattern-examples, .registry-concepts, .buildkit-features, .storage-drivers, .swarm-features, .troubleshooting-tools, .plugin-examples, .edge-scenarios {
+  .benefits-grid, .commands-grid, .use-cases-grid, .concept-grid, .volume-types, .compose-features, .env-strategies, .health-methods, .optimization-tips, .monitoring-tools, .security-features, .performance-tips, .networking-concepts, .cicd-workflows, .pattern-examples, .registry-concepts, .buildkit-features, .storage-drivers, .swarm-features, .troubleshooting-tools, .plugin-examples, .edge-scenarios, .operator-concepts, .mesh-features, .monitoring-tools, .gitops-workflows, .multicluster-concepts, .edge-solutions, .scheduler-features, .workload-apis, .performance-tools, .recovery-strategies {
     grid-template-columns: 1fr;
   }
   .benefits-grid {
@@ -768,7 +900,7 @@ p {
   .examples-list {
     grid-template-columns: 1fr;
   }
-  .concept-item, .practice-item, .benefit-card, .use-case-card, .comparison-box, .concept-card, .volume-type, .compose-feature, .strategy, .method, .tip, .tool, .feature-card, .tip-card, .network-concept, .workflow-card, .pattern-card, .registry-card, .feature-item, .driver-card, .swarm-card, .tool-item, .plugin-card, .scenario-card {
+  .concept-item, .practice-item, .benefit-card, .use-case-card, .comparison-box, .concept-card, .volume-type, .compose-feature, .strategy, .method, .tip, .tool, .feature-card, .tip-card, .network-concept, .workflow-card, .pattern-card, .registry-card, .feature-item, .driver-card, .swarm-card, .tool-item, .plugin-card, .scenario-card, .solution-card, .api-card, .strategy-card {
     padding: 1.5rem;
   }
   .architecture-layer {
@@ -794,5 +926,33 @@ p {
   }
   .concept-item h3, .practice-item h3 {
     font-size: 1.25rem;
+  }
+
+  .navigation-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .nav-section {
+    gap: 0.8rem;
+    padding: 1rem;
+    min-width: auto;
+    width: 100%;
+  }
+
+  .nav-section h4 {
+    font-size: 0.9rem;
+  }
+
+  .nav-section .nav-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    min-width: auto;
+  }
+
+  .architecture-layer {
+    flex-direction: column;
+    text-align: center;
   }
 }
